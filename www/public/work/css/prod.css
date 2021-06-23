@@ -1,0 +1,201 @@
+.container-xl {
+	max-width: 1200px;
+}
+
+.container-lg {
+	max-width: 992px;
+}
+
+.container-md {
+	max-width: 768px;
+}
+
+
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.font_Montserrat {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.square_35px {
+	width: 35px;
+	height: 35px;
+}
+
+
+.bg_independence {
+	background-color: #555b6e;
+}
+
+.text_independence {
+	color: #555b6e;
+}
+
+.bg_ebony {
+	background-color: #6B705C;
+}
+
+.text_ebony {
+	color: #6B705C;
+}
+
+.bg_ash-gray {
+	background-color: #b7b7a4;
+}
+
+.bg_antique-brass {
+	background-color: #cb997e;
+}
+
+.link-no-underline {
+	text-decoration: none;
+}
+
+
+.bg_yellow {
+	background-color: #E9C46A;
+}
+
+.text_yellow {
+	color: #F4D58D;
+}
+
+.bg_dark-blue-darker {
+	background-color: #22223B;
+}
+
+.bg_dark-blue-medium-light {
+	background-color: #2A2B44;
+}
+
+.bg_dark-blue-lighter {
+	background-color: #2C2D47;
+}
+
+.text_dark-blue-lighter {
+	color: #4A4E69;
+}
+
+.bg_red {
+	background-color: #E76f51;
+}
+
+.text_red {
+	color: #E76f51;
+}
+
+.bg_dark {
+	background-color: #1A1A2E
+}
+
+
+
+
+.bg_dark-blue-0 {
+	background-color: #1A1A2E
+}
+
+.bg_dark-blue-1 {
+	background-color: #22223B;
+}
+
+.bg_dark-blue-2 {
+	background-color: #272841;
+}
+
+.bg_dark-blue-3 {
+	background-color: #2C2D47;
+}
+
+
+.text_dark-blue-0 {
+	color: #1A1A2E
+}
+
+.text_dark-blue-1 {
+	color: #22223B;
+}
+
+.text_dark-blue-2 {
+	color: #2A2B44;
+}
+
+.text_dark-blue-3 {
+	color: #2C2D47;
+}
+
+
+
+.bg_yellow-white-grey-0 {
+	background-color: #F4D58D;
+}
+
+.bg_yellow-white-grey-1 {
+	background-color: #F6EDDB;
+}
+
+.bg_yellow-white-grey-2 {
+	background-color: #F6F4F2;
+}
+
+.bg_yellow-white-grey-3 {
+	background-color: #FAFAFA;
+}
+
+.bg_yellow-white-grey-4 {
+	background-color: #EEEFF0;
+}
+
+.bg_yellow-white-grey-5 {
+	background-color: #DDDEE1;
+}
+
+.bg_yellow-white-grey-6 {
+	background-color: #BFC0C7;
+}
+
+
+
+.text_yellow-white-grey-0 {
+	color: #F4D58D;
+}
+
+.text_yellow-white-grey-1 {
+	color: #F6EDDB;
+}
+
+.text_yellow-white-grey-2 {
+	color: #F6F4F2;
+}
+
+.text_yellow-white-grey-3 {
+	color: #FAFAFA;
+}
+
+.text_yellow-white-grey-4 {
+	color: #EEEFF0;
+}
+
+.text_yellow-white-grey-5 {
+	color: #DDDEE1;
+}
+
+.text_yellow-white-grey-6 {
+	color: #BFC0C7;
+}
+
+.bg_red {
+	background-color: #E07A5F;
+}
+
+.bg_green {
+	background-color: #81B29A;
+}
+
+.text_green {
+	color: #81B29A;
+}
+
