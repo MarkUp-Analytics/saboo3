@@ -20,4 +20,8 @@ Route: Private
 */
 router.get("/testTwo", testController.testTwo);
 
+router.post("/insert", testController.testInsert);
+
+router.delete("/deleteAll", testController.testDeleteAll);
+
 module.exports = router;

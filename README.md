@@ -12,3 +12,43 @@
     `npm install`<br>
     `npm run serve`<br>    
 8. You will see an URL if you follow the above instructions. Click on the link to see the app.     
+
+## Instrunctions on how to install mongo DB
+
+Following instructions are for MAC
+
+* Check brew is intalled using the following command 
+    <br>
+    `brew --version`
+    <br>
+* If it's not installed, install it using the following command
+    <br> 
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` <br>
+* Install mongoDB in your system using the below commands
+    <br>
+    `brew tap mongodb/brew`
+    <br>
+    `brew install mongodb-community@5.0`
+    <br>
+* Install mongo shell using the command
+    <br>
+    `brew install mongosh`
+    <br>   
+* Start mongodb service using the command
+    `brew services stop mongodb-community`
+* Now you can connect to the test DB using the command in a terminal
+    <br>
+    `mongosh "mongodb://localhost:27017/testApp?retryWrites=true"`
+    <br>       
+
+## Instrunctions on how to run express js server
+
+* cd into express_server folder using the cmd
+    `cd express_server`
+* Run the following commands in the same terminal
+    `npm install`<br>
+    `npm run start`<br>      
+* You will see an URL if you follow the above instructions. Click on the link to see the server app.     
+* Try the following link to see different API
+    `http://localhost:3000/test/testOne`<br>
+    `http://localhost:3000/test/testTwo`<br>

@@ -6,10 +6,13 @@ const bodyParser = require("body-parser");
 /* require config and routes */
 const config = require("./config/server");
 
+const passport = require("./config/passport");
+
 /* Object Created */
 const app = express();
 /* loading routes. */
 const testRoutes = require("./api/routes/Test");
+const userRoutes = require("./api/routes/Users");
 
 /* Handel POST Request */
 app.use(bodyParser.urlencoded({
@@ -26,6 +29,7 @@ app.all("/", (req, res) => {
 })
 
 app.use("/test", testRoutes);
+app.use("/users", userRoutes);
 /* Entry Point End */
 
 /* No Route Found Start */
@@ -52,15 +56,15 @@ app.listen(config.SERVER_PORT, () =>
 );
 
 /* Connect To MongoDB */
-// mongoose.connect(
-//     config.mongodb.MONGO_URL, {
-//         useCreateIndex: true,
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//     },
-//     (err, db) => {
-//         if (err) throw err;
-//         console.log(`MongoDB connected on port ${config.mongodb.MONGO_PORT}`);
-//     }
-// );
-// mongoose.Promise = global.Promise;
+mongoose.connect(
+    config.mongodb.MONGO_URL, {
+        useCreateIndex: true,
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+    },
+    (err, db) => {
+        if (err) throw err;
+        console.log(`MongoDB connected on port ${config.mongodb.MONGO_PORT}`);
+    }
+);
+mongoose.Promise = global.Promise;
