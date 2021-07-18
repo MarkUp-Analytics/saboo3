@@ -45,10 +45,10 @@ Following instructions are for MAC
 
 * cd into express_server folder using the cmd
     `cd express_server`
-* Run the following commands in the same terminal
-    <br>`npm install`<br>
+* Run the following commands in the same terminal<br>
+    `npm install`<br>
     `npm run start`<br>      
 * You will see an URL if you follow the above instructions. Click on the link to see the server app.     
-* Try the following link to see different API
+* Try the following link to see different API<br>
     `http://localhost:3000/test/testOne`<br>
     `http://localhost:3000/test/testTwo`<br>
