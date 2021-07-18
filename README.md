@@ -35,8 +35,8 @@ Following instructions are for MAC
     `brew install mongosh`
     <br>   
 * Start mongodb service using the command
-    `brew services stop mongodb-community`
-* Now you can connect to the test DB using the command in a terminal
+    `brew services start mongodb-community@5.0`
+* Now you can connect to the test DB named `testApp` using the command in a terminal
     <br>
     `mongosh "mongodb://localhost:27017/testApp?retryWrites=true"`
     <br>       
