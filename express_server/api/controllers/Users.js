@@ -6,17 +6,13 @@ exports.login = (req, res, next) => {
 
   if(!user.email) {
     return res.status(400).json({
-      errors: {
-        email: 'is required',
-      },
+      message: "Email is required",
     });
   }
 
   if(!user.password) {
     return res.status(400).json({
-      errors: {
-        password: 'is required',
-      },
+      message: "Password is required",
     });
   }
 
@@ -31,21 +27,30 @@ exports.login = (req, res, next) => {
 
       return res.json(user.toAuthJSON());
     }
-
-    return res.status(400).json({
+    if(info.errors){
+      return res.status(400).json({
         status: false,
-        message: info.errors
+        message: "Invalid username/password!"
       });
+    }
   })(req, res, next);
 }
 
 exports.signup = async (req, res) => {
     const user = req.body;
 
+  if(!user.name) {
+    return res.status(400).json({
+      errors: {
+        message: "Name is required",
+      },
+    });
+  }  
+
   if(!user.email) {
     return res.status(400).json({
       errors: {
-        email: 'is required',
+        message: "Email is required",
       },
     });
   }
@@ -53,7 +58,7 @@ exports.signup = async (req, res) => {
   if(!user.password) {
     return res.status(400).json({
       errors: {
-        password: 'is required',
+        message: "Password is required",
       },
     });
   }
@@ -68,7 +73,6 @@ exports.signup = async (req, res) => {
     {
         res.status(200).json({
             status: true,
-            message: "All Test Data successfully deleted",
             data: { user: finalUser.toAuthJSON() }
         })
     }

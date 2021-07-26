@@ -2,6 +2,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const multer = require('multer');
+const upload = multer();
 
 /* require config and routes */
 const config = require("./config/server");
@@ -10,26 +12,31 @@ const passport = require("./config/passport");
 
 /* Object Created */
 const app = express();
+
+// for parsing application/json
+app.use(bodyParser.json()); 
+
+// for parsing application/xwww-
+app.use(bodyParser.urlencoded({ extended: true })); 
+
+// for parsing multipart/form-data
+app.use(upload.array());
+
 /* loading routes. */
 const testRoutes = require("./api/routes/Test");
 const userRoutes = require("./api/routes/Users");
 
-/* Handel POST Request */
-app.use(bodyParser.urlencoded({
-    extended: false
-}));
-app.use(bodyParser.json());
 
 /* Entry Point Start */
-app.all("/", (req, res) => {
+app.all("/api/", (req, res) => {
     res.status(200).json({
         status: true,
         message: "Welcome to Saboo3 app"
     })
 })
 
-app.use("/test", testRoutes);
-app.use("/users", userRoutes);
+app.use("/api/test", testRoutes);
+app.use("/api/users", userRoutes);
 /* Entry Point End */
 
 /* No Route Found Start */
